@@ -1,11 +1,10 @@
-package com.samsung.IMS.model;
+package com.samsung.IMS.model.db;
 
 import jakarta.persistence.*;
 import lombok.*;
 
 import java.time.LocalDateTime;
 
-@Builder
 @AllArgsConstructor
 @NoArgsConstructor
 @Getter

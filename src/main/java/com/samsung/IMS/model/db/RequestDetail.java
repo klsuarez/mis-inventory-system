@@ -1,9 +1,8 @@
-package com.samsung.IMS.model;
+package com.samsung.IMS.model.db;
 
 import jakarta.persistence.*;
 import lombok.*;
 
-@Builder
 @AllArgsConstructor
 @NoArgsConstructor
 @Getter

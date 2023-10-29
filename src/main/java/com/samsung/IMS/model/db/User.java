@@ -1,28 +1,27 @@
-package com.samsung.IMS.model;
+package com.samsung.IMS.model.db;
 
 import jakarta.persistence.*;
 import lombok.*;
 
 import java.time.LocalDateTime;
 
-@Builder
 @AllArgsConstructor
 @NoArgsConstructor
 @Getter
 @Setter
 @Entity
-@Table(name = "item")
-public class Item {
+@Table(name = "user")
+public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "item_id", nullable = false)
-    private Long itemId;
+    @Column(name = "user_id", nullable = false)
+    private Long userId;
 
-    private String itemName;
+    private String name;
 
-    private String category;
+    private String loginId;
 
-    private int stockQuantity;
+    private String role;
 
     private LocalDateTime createDate;
 
