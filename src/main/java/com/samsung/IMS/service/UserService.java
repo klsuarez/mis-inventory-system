@@ -21,13 +21,13 @@ public class UserService {
         List<ItemVO> itemsVO = new ArrayList<>();
 
         for (Item item : items) {
-            if (item.getStockQuantity() > 0) {
+            if (item.getStock() > 0) {
                 itemsVO.add(
                         ItemVO.builder()
                                 .itemId(item.getItemId())
                                 .itemName(item.getItemName())
                                 .category(item.getCategory())
-                                .stockQuantity(item.getStockQuantity())
+                                .stockQuantity(item.getStock())
                                 .updateDate(item.getUpdateDate())
                                 .build()
                 );

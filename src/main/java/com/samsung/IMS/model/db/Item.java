@@ -18,10 +18,11 @@ public class Item {
     private Long itemId;
 
     private String itemName;
+    private String description;
 
     private String category;
 
-    private int stockQuantity;
+    private int stock;
 
     private LocalDateTime createDate;
 
