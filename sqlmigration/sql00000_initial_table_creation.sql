@@ -34,6 +34,8 @@ CREATE TABLE request_detail (
 	quantity INT NOT NULL,
     request_id INT UNSIGNED NOT NULL,
 	item_id INT UNSIGNED NOT NULL,
+    duration_days INT NOT NULL,
+    reason VARCHAR(255),
 	create_date TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
 	update_date TIMESTAMP ON UPDATE CURRENT_TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
     CONSTRAINT request_id FOREIGN KEY (request_id) REFERENCES request(request_id),

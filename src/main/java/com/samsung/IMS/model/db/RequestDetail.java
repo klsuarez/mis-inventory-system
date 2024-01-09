@@ -32,4 +32,8 @@ public class RequestDetail {
     private LocalDateTime createDate;
 
     private LocalDateTime updateDate;
+
+    private int durationDays;
+
+    private String reason;
 }
