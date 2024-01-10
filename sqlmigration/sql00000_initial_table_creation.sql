@@ -23,7 +23,7 @@ CREATE TABLE item (
 CREATE TABLE request (
     request_id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
     user_id INT UNSIGNED NOT NULL,
-	create_date TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    create_date TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
 	update_date TIMESTAMP ON UPDATE CURRENT_TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
     CONSTRAINT user_id FOREIGN KEY (user_id) REFERENCES user(user_id)
 );
@@ -34,8 +34,10 @@ CREATE TABLE request_detail (
 	quantity INT NOT NULL,
     request_id INT UNSIGNED NOT NULL,
 	item_id INT UNSIGNED NOT NULL,
-    duration_days INT NOT NULL,
+    request_start_date TIMESTAMP NOT NULL,
+    request_end_date TIMESTAMP NOT NULL,
     reason VARCHAR(255),
+    status enum('approved','pending','declined') NOT NULL DEFAULT 'pending',
 	create_date TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
 	update_date TIMESTAMP ON UPDATE CURRENT_TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
     CONSTRAINT request_id FOREIGN KEY (request_id) REFERENCES request(request_id),

@@ -1,4 +1,4 @@
-package com.samsung.IMS.model.db;
+package com.samsung.IMS.db.entity;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -7,11 +7,13 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import java.time.LocalDateTime;
+import java.time.LocalDate;
 
+@Builder
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
@@ -25,15 +27,19 @@ public class RequestDetail {
 
     private int quantity;
 
-    private int requestId;
+    private Long requestId;
 
-    private int itemId;
+    private Long itemId;
 
-    private LocalDateTime createDate;
+    private LocalDate requestStartDate;
 
-    private LocalDateTime updateDate;
-
-    private int durationDays;
+    private LocalDate requestEndDate;
 
     private String reason;
+
+    private String status;
+
+    private LocalDate createDate;
+
+    private LocalDate updateDate;
 }

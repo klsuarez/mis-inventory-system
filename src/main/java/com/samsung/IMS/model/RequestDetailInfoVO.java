@@ -13,14 +13,13 @@ import java.time.LocalDate;
 @NoArgsConstructor
 @Getter
 @Setter
-public class ItemVO {
+public class RequestDetailInfoVO {
+
+    private Long userId;
     private Long itemId;
+    private int quantity;
+    private LocalDate startDate;
+    private LocalDate endDate;
+    private String reason;
 
-    private String itemName;
-
-    private String category;
-
-    private int stockQuantity;
-
-    private LocalDate updateDate;
 }

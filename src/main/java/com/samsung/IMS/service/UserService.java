@@ -1,12 +1,11 @@
 package com.samsung.IMS.service;
 
 import com.samsung.IMS.model.ItemVO;
-import com.samsung.IMS.model.db.Item;
-import com.samsung.IMS.repository.ItemRepository;
+import com.samsung.IMS.db.entity.Item;
+import com.samsung.IMS.db.repository.ItemRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 
